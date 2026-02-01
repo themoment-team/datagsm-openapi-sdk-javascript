@@ -1,0 +1,1 @@
+# datagsm-openapi-sdk-javascript
