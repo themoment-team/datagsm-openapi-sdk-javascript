@@ -1,0 +1,33 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# production
+/build
+/dist
+/lib
+/out
+
+# typescript
+*.tsbuildinfo
+*.d.ts
+!src/**/*.d.ts
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# env files
+.env*
+
+# IDEs
+.vscode/
+.idea/

@@ -1,0 +1,72 @@
+{
+  "name": "datagsm-openapi-sdk-javascript",
+  "version": "0.1.0",
+  "description": "Official JavaScript/TypeScript SDK for DataGSM OpenAPI",
+  "license": "MIT",
+  "author": "themoment-team",
+  "homepage": "https://github.com/themoment-team/datagsm-openapi-sdk-javascript#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themoment-team/datagsm-openapi-sdk-javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/themoment-team/datagsm-openapi-sdk-javascript/issues"
+  },
+  "keywords": [
+    "datagsm",
+    "openapi",
+    "sdk",
+    "api",
+    "client",
+    "javascript",
+    "typescript",
+    "gsm",
+    "neis"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "pnpm run build"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
