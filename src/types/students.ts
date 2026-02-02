@@ -1,5 +1,5 @@
 export type Sex = 'MAN' | 'WOMAN';
-export type Major = 'SW_DEVELOPMENT' | 'AI_DEVELOPMENT' | 'SMART_IOT_DEVELOPMENT';
+export type Major = 'SW_DEVELOPMENT' | 'SMART_IOT' | 'AI';
 export type Role = 'STUDENT_COUNCIL' | 'DORMITORY_MANAGER' | 'GENERAL_STUDENT' | 'GRADUATE';
 export type ClubType = 'MAJOR_CLUB' | 'JOB_CLUB' | 'AUTONOMOUS_CLUB';
 export type SortBy =
