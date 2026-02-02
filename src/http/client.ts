@@ -94,7 +94,7 @@ export class HttpClient {
   private buildHeaders(additionalHeaders?: Record<string, string>): Record<string, string> {
     return {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.config.apiKey}`,
+      'X-API-KEY': this.config.apiKey,
       ...this.config.headers,
       ...additionalHeaders,
     };
