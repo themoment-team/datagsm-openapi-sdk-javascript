@@ -7,7 +7,7 @@ import { HealthApi } from './domains/health';
 
 export interface DataGsmClientConfig {
   apiKey: string;
-  baseUrl: string;
+  baseUrl?: string;
   timeout?: number;
   headers?: Record<string, string>;
 }
@@ -22,15 +22,11 @@ export class DataGsmClient {
 
   constructor(config: DataGsmClientConfig) {
     this.httpClient = new HttpClient({
-      baseUrl: config.baseUrl,
+      baseUrl: config.baseUrl || 'https://openapi.data.hellogsm.kr',
       apiKey: config.apiKey,
-      timeout: config.timeout,
+      timeout: config.timeout ?? 30000,
       headers: config.headers,
     });
-  }
-
-  static builder(apiKey: string): DataGsmClientBuilder {
-    return new DataGsmClientBuilder(apiKey);
   }
 
   students(): StudentsApi {
@@ -66,43 +62,5 @@ export class DataGsmClient {
       this._healthApi = new HealthApi(this.httpClient);
     }
     return this._healthApi;
-  }
-}
-
-export class DataGsmClientBuilder {
-  private config: Partial<DataGsmClientConfig>;
-
-  constructor(apiKey: string) {
-    this.config = {
-      apiKey,
-      baseUrl: 'https://openapi.data.hellogsm.kr',
-      timeout: 30000,
-    };
-  }
-
-  baseUrl(url: string): this {
-    this.config.baseUrl = url;
-    return this;
-  }
-
-  timeout(ms: number): this {
-    this.config.timeout = ms;
-    return this;
-  }
-
-  headers(headers: Record<string, string>): this {
-    this.config.headers = headers;
-    return this;
-  }
-
-  build(): DataGsmClient {
-    if (!this.config.apiKey) {
-      throw new Error('API key is required');
-    }
-    if (!this.config.baseUrl) {
-      throw new Error('Base URL is required');
-    }
-
-    return new DataGsmClient(this.config as DataGsmClientConfig);
   }
 }
