@@ -1,7 +1,6 @@
-export type Sex = 'MAN' | 'WOMAN';
-export type Major = 'SW_DEVELOPMENT' | 'SMART_IOT' | 'AI';
+import type { Sex, Major, ClubSummary, SortDirection } from './index';
+
 export type Role = 'STUDENT_COUNCIL' | 'DORMITORY_MANAGER' | 'GENERAL_STUDENT' | 'GRADUATE';
-export type ClubType = 'MAJOR_CLUB' | 'JOB_CLUB' | 'AUTONOMOUS_CLUB';
 export type SortBy =
   | 'ID'
   | 'NAME'
@@ -15,13 +14,6 @@ export type SortBy =
   | 'SEX'
   | 'DORMITORY_ROOM'
   | 'IS_LEAVE_SCHOOL';
-export type SortDirection = 'ASC' | 'DESC';
-
-export interface ClubSummary {
-  id: number;
-  name: string;
-  type: ClubType;
-}
 
 export interface Student {
   id: number;

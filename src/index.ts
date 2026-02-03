@@ -11,33 +11,31 @@ export {
   NetworkError,
 } from './errors';
 
-export type { PageInfo, PageRequest, PagedResponse } from './types';
+export type {
+  PageInfo,
+  PageRequest,
+  PagedResponse,
+  SortDirection,
+  Sex,
+  Major,
+  ClubType,
+  ClubSummary,
+  ParticipantInfo,
+  ApiResponse,
+} from './types';
 
 export type {
   Student,
-  ClubSummary as StudentClubSummary,
-  Sex,
-  Major,
   Role,
   SortBy as StudentSortBy,
-  SortDirection,
   GetStudentsRequest,
   GetStudentsResponse,
 } from './types/students';
 
-export type {
-  Club,
-  ParticipantInfo as ClubParticipantInfo,
-  ClubType,
-  ClubSortBy,
-  GetClubsRequest,
-  GetClubsResponse,
-} from './types/clubs';
+export type { Club, ClubSortBy, GetClubsRequest, GetClubsResponse } from './types/clubs';
 
 export type {
   Project,
-  ClubSummary as ProjectClubSummary,
-  ParticipantInfo as ProjectParticipantInfo,
   ProjectSortBy,
   GetProjectsRequest,
   GetProjectsResponse,
