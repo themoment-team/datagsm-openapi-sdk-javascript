@@ -1,5 +1,5 @@
 {
-  "name": "datagsm-openapi-sdk-javascript",
+  "name": "@themoment-team/datagsm-openapi",
   "version": "0.1.0",
   "description": "Official JavaScript/TypeScript SDK for DataGSM OpenAPI",
   "license": "MIT",

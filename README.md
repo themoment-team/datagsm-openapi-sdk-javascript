@@ -2,7 +2,7 @@
 
 DataGSM의 OpenAPI를 추상화된 환경에서 제공합니다.
 
-[![npm version](https://img.shields.io/npm/v/datagsm-openapi-sdk-javascript.svg)](https://www.npmjs.com/package/datagsm-openapi-sdk-javascript)
+[![npm version](https://img.shields.io/npm/v/@themoment-team/datagsm-openapi.svg)](https://www.npmjs.com/package/@themoment-team/datagsm-openapi)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Node](https://img.shields.io/badge/Node-20%2B-339933.svg)](https://nodejs.org/)
 
@@ -10,13 +10,13 @@ DataGSM의 OpenAPI를 추상화된 환경에서 제공합니다.
 
 ```bash
 # npm
-npm install datagsm-openapi-sdk-javascript
+npm install @themoment-team/datagsm-openapi
 
 # pnpm
-pnpm add datagsm-openapi-sdk-javascript
+pnpm add @themoment-team/datagsm-openapi
 
 # yarn
-yarn add datagsm-openapi-sdk-javascript
+yarn add @themoment-team/datagsm-openapi
 ```
 
 ## 사용 방법
