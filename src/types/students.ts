@@ -1,6 +1,11 @@
 import type { Sex, Major, ClubSummary, SortDirection } from './index';
 
-export type Role = 'STUDENT_COUNCIL' | 'DORMITORY_MANAGER' | 'GENERAL_STUDENT' | 'GRADUATE';
+export type Role =
+  | 'STUDENT_COUNCIL'
+  | 'DORMITORY_MANAGER'
+  | 'GENERAL_STUDENT'
+  | 'GRADUATE'
+  | 'WITHDRAWN';
 export type SortBy =
   | 'ID'
   | 'NAME'
@@ -12,8 +17,7 @@ export type SortBy =
   | 'MAJOR'
   | 'ROLE'
   | 'SEX'
-  | 'DORMITORY_ROOM'
-  | 'IS_LEAVE_SCHOOL';
+  | 'DORMITORY_ROOM';
 
 export interface Student {
   id: number;
@@ -28,7 +32,6 @@ export interface Student {
   role: Role;
   dormitoryFloor: number;
   dormitoryRoom: number;
-  isLeaveSchool: boolean;
   majorClub?: ClubSummary;
   jobClub?: ClubSummary;
   autonomousClub?: ClubSummary;
@@ -44,7 +47,6 @@ export interface GetStudentsRequest {
   sex?: Sex;
   role?: Role;
   dormitoryRoom?: number;
-  isLeaveSchool?: boolean;
   includeGraduates?: boolean;
   page?: number;
   size?: number;

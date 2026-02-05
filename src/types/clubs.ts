@@ -6,8 +6,8 @@ export interface Club {
   id: number;
   name: string;
   type: ClubType;
-  leader?: ParticipantInfo;
-  participants?: ParticipantInfo[];
+  leader: ParticipantInfo;
+  participants: ParticipantInfo[];
 }
 
 export interface GetClubsRequest {

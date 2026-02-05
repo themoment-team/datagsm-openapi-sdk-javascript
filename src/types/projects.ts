@@ -5,9 +5,9 @@ export type ProjectSortBy = 'ID' | 'NAME';
 export interface Project {
   id: number;
   name: string;
-  description?: string;
+  description: string;
   club?: ClubSummary;
-  participants?: ParticipantInfo[];
+  participants: ParticipantInfo[];
 }
 
 export interface GetProjectsRequest {

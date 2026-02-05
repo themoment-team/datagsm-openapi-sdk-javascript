@@ -18,7 +18,6 @@ export class StudentsApi {
         sex: request.sex,
         role: request.role,
         dormitoryRoom: request.dormitoryRoom,
-        isLeaveSchool: request.isLeaveSchool,
         includeGraduates: request.includeGraduates,
         page: request.page,
         size: request.size,
