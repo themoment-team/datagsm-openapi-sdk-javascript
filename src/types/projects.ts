@@ -1,4 +1,4 @@
-import type { ClubSummary, ParticipantInfo, SortDirection } from './index';
+import type { ApiResponse, ClubSummary, ParticipantInfo, SortDirection } from './index';
 
 export type ProjectSortBy = 'ID' | 'NAME';
 
@@ -20,13 +20,8 @@ export interface GetProjectsRequest {
   sortDirection?: SortDirection;
 }
 
-export interface GetProjectsResponse {
-  status: string;
-  code: number;
-  message: string;
-  data: {
-    totalPages: number;
-    totalElements: number;
-    projects: Project[];
-  };
-}
+export type GetProjectsResponse = ApiResponse<{
+  totalPages: number;
+  totalElements: number;
+  projects: Project[];
+}>;

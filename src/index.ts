@@ -32,7 +32,13 @@ export type {
   GetStudentsResponse,
 } from './types/students';
 
-export type { Club, ClubSortBy, GetClubsRequest, GetClubsResponse } from './types/clubs';
+export type {
+  Club,
+  ClubSortBy,
+  ClubStatus,
+  GetClubsRequest,
+  GetClubsResponse,
+} from './types/clubs';
 
 export type {
   Project,

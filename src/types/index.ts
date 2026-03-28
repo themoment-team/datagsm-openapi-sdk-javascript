@@ -1,7 +1,7 @@
 export type SortDirection = 'ASC' | 'DESC';
 export type Sex = 'MAN' | 'WOMAN';
 export type Major = 'SW_DEVELOPMENT' | 'SMART_IOT' | 'AI';
-export type ClubType = 'MAJOR_CLUB' | 'JOB_CLUB' | 'AUTONOMOUS_CLUB';
+export type ClubType = 'MAJOR_CLUB' | 'AUTONOMOUS_CLUB';
 
 export interface ClubSummary {
   id: number;

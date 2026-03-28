@@ -19,6 +19,8 @@ export class StudentsApi {
         role: request.role,
         dormitoryRoom: request.dormitoryRoom,
         includeGraduates: request.includeGraduates,
+        includeWithdrawn: request.includeWithdrawn,
+        onlyEnrolled: request.onlyEnrolled,
         page: request.page,
         size: request.size,
         sortBy: request.sortBy,
