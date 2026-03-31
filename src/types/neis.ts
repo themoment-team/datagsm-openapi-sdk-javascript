@@ -22,6 +22,9 @@ export interface GetMealsRequest {
   date?: string;
   fromDate?: string;
   toDate?: string;
+  isValidDateCombination?: boolean;
+  isValidDateRange?: boolean;
+  isValidDateRangePeriod?: boolean;
 }
 
 export type GetMealsResponse = ApiResponse<Meal[]>;
@@ -46,6 +49,9 @@ export interface GetSchedulesRequest {
   date?: string;
   fromDate?: string;
   toDate?: string;
+  isValidDateCombination?: boolean;
+  isValidDateRange?: boolean;
+  isValidDateRangePeriod?: boolean;
 }
 
 export type GetSchedulesResponse = ApiResponse<Schedule[]>;

@@ -17,6 +17,9 @@ export class NeisApi {
         date: request.date,
         fromDate: request.fromDate,
         toDate: request.toDate,
+        isValidDateCombination: request.isValidDateCombination,
+        isValidDateRange: request.isValidDateRange,
+        isValidDateRangePeriod: request.isValidDateRangePeriod,
       },
     });
   }
@@ -29,6 +32,9 @@ export class NeisApi {
         date: request.date,
         fromDate: request.fromDate,
         toDate: request.toDate,
+        isValidDateCombination: request.isValidDateCombination,
+        isValidDateRange: request.isValidDateRange,
+        isValidDateRangePeriod: request.isValidDateRangePeriod,
       },
     });
   }

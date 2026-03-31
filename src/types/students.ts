@@ -49,6 +49,9 @@ export interface GetStudentsRequest {
   sex?: Sex;
   role?: Role;
   dormitoryRoom?: number;
+  specialty?: string;
+  major?: Major;
+  githubId?: string;
   includeGraduates?: boolean;
   includeWithdrawn?: boolean;
   onlyEnrolled?: boolean;
