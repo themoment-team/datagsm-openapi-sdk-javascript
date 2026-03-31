@@ -1,4 +1,4 @@
-import type { Sex, Major, ClubSummary, SortDirection } from './index';
+import type { ApiResponse, ClubSummary, Major, Sex, SortDirection } from './index';
 
 export type Role =
   | 'STUDENT_COUNCIL'
@@ -24,17 +24,19 @@ export interface Student {
   name: string;
   sex: Sex;
   email: string;
-  grade: number;
-  classNum: number;
-  number: number;
-  studentNumber: number;
-  major: Major;
+  grade?: number;
+  classNum?: number;
+  number?: number;
+  studentNumber?: number;
+  major?: Major;
+  specialty?: string;
   role: Role;
-  dormitoryFloor: number;
-  dormitoryRoom: number;
+  dormitoryFloor?: number;
+  dormitoryRoom?: number;
   majorClub?: ClubSummary;
-  jobClub?: ClubSummary;
   autonomousClub?: ClubSummary;
+  githubId?: string;
+  githubUrl?: string;
 }
 
 export interface GetStudentsRequest {
@@ -47,20 +49,20 @@ export interface GetStudentsRequest {
   sex?: Sex;
   role?: Role;
   dormitoryRoom?: number;
+  specialty?: string;
+  major?: Major;
+  githubId?: string;
   includeGraduates?: boolean;
+  includeWithdrawn?: boolean;
+  onlyEnrolled?: boolean;
   page?: number;
   size?: number;
   sortBy?: SortBy;
   sortDirection?: SortDirection;
 }
 
-export interface GetStudentsResponse {
-  status: string;
-  code: number;
-  message: string;
-  data: {
-    totalPages: number;
-    totalElements: number;
-    students: Student[];
-  };
-}
+export type GetStudentsResponse = ApiResponse<{
+  totalPages: number;
+  totalElements: number;
+  students: Student[];
+}>;

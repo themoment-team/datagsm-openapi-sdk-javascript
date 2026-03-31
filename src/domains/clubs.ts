@@ -12,6 +12,8 @@ export class ClubsApi {
         clubId: request.clubId,
         clubName: request.clubName,
         clubType: request.clubType,
+        clubStatus: request.clubStatus,
+        foundedYear: request.foundedYear,
         page: request.page,
         size: request.size,
         includeLeaderInParticipants: request.includeLeaderInParticipants,

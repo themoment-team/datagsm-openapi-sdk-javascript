@@ -1,19 +1,25 @@
-import type { ClubType, ParticipantInfo, SortDirection } from './index';
+import type { ApiResponse, ClubType, ParticipantInfo, SortDirection } from './index';
 
-export type ClubSortBy = 'ID' | 'NAME' | 'TYPE';
+export type ClubStatus = 'ACTIVE' | 'ABOLISHED';
+export type ClubSortBy = 'ID' | 'NAME' | 'TYPE' | 'FOUNDED_YEAR' | 'STATUS';
 
 export interface Club {
   id: number;
   name: string;
   type: ClubType;
-  leader: ParticipantInfo;
+  leader?: ParticipantInfo;
   participants: ParticipantInfo[];
+  foundedYear: number;
+  status: ClubStatus;
+  abolishedYear?: number;
 }
 
 export interface GetClubsRequest {
   clubId?: number;
   clubName?: string;
   clubType?: ClubType;
+  clubStatus?: ClubStatus;
+  foundedYear?: number;
   page?: number;
   size?: number;
   includeLeaderInParticipants?: boolean;
@@ -21,13 +27,8 @@ export interface GetClubsRequest {
   sortDirection?: SortDirection;
 }
 
-export interface GetClubsResponse {
-  status: string;
-  code: number;
-  message: string;
-  data: {
-    totalPages: number;
-    totalElements: number;
-    clubs: Club[];
-  };
-}
+export type GetClubsResponse = ApiResponse<{
+  totalPages: number;
+  totalElements: number;
+  clubs: Club[];
+}>;

@@ -1,3 +1,5 @@
+import type { ApiResponse } from './index';
+
 export type MealType = 'BREAKFAST' | 'LUNCH' | 'DINNER';
 
 export interface Meal {
@@ -20,14 +22,12 @@ export interface GetMealsRequest {
   date?: string;
   fromDate?: string;
   toDate?: string;
+  isValidDateCombination?: boolean;
+  isValidDateRange?: boolean;
+  isValidDateRangePeriod?: boolean;
 }
 
-export interface GetMealsResponse {
-  status: string;
-  code: number;
-  message: string;
-  data: Meal[];
-}
+export type GetMealsResponse = ApiResponse<Meal[]>;
 
 export interface Schedule {
   scheduleId: string;
@@ -49,11 +49,9 @@ export interface GetSchedulesRequest {
   date?: string;
   fromDate?: string;
   toDate?: string;
+  isValidDateCombination?: boolean;
+  isValidDateRange?: boolean;
+  isValidDateRangePeriod?: boolean;
 }
 
-export interface GetSchedulesResponse {
-  status: string;
-  code: number;
-  message: string;
-  data: Schedule[];
-}
+export type GetSchedulesResponse = ApiResponse<Schedule[]>;

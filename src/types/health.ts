@@ -1,5 +1,3 @@
-export interface HealthCheckResponse {
-  status: string;
-  code: number;
-  message: string;
-}
+import type { ApiResponse } from './index';
+
+export type HealthCheckResponse = Omit<ApiResponse<never>, 'data'>;
