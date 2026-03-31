@@ -22,7 +22,7 @@ export class DataGsmClient {
 
   constructor(config: DataGsmClientConfig) {
     this.httpClient = new HttpClient({
-      baseUrl: config.baseUrl || 'https://openapi.data.hellogsm.kr',
+      baseUrl: config.baseUrl || 'https://openapi.datagsm.kr',
       apiKey: config.apiKey,
       timeout: config.timeout ?? 30000,
       headers: config.headers,

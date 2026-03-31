@@ -21,4 +21,4 @@ yarn add @themoment-team/datagsm-openapi
 
 ## 사용 방법
 
-자세한 사용법은 [기술문서](https://datagsm-front-client.vercel.app/docs/api/sdk/javascript)를 참고하십시오.
+자세한 사용법은 [기술문서](https://docs.datagsm.kr/api/sdk/javascript)를 참고하십시오.
