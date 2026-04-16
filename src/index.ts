@@ -48,6 +48,9 @@ export type {
 } from './types/projects';
 
 export type {
+  Timetable,
+  GetTimetablesRequest,
+  GetTimetablesResponse,
   Meal,
   MealType,
   GetMealsRequest,
