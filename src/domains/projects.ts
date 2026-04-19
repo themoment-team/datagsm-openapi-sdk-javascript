@@ -12,6 +12,7 @@ export class ProjectsApi {
         projectId: request.projectId,
         projectName: request.projectName,
         clubId: request.clubId,
+        status: request.status,
         page: request.page,
         size: request.size,
         sortBy: request.sortBy,
