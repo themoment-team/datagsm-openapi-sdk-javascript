@@ -43,6 +43,7 @@ export type {
 export type {
   Project,
   ProjectSortBy,
+  ProjectStatus,
   GetProjectsRequest,
   GetProjectsResponse,
 } from './types/projects';

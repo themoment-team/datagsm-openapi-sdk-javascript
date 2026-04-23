@@ -1,6 +1,7 @@
 import type { ApiResponse, ClubSummary, ParticipantInfo, SortDirection } from './index';
 
 export type ProjectSortBy = 'ID' | 'NAME';
+export type ProjectStatus = 'ACTIVE' | 'ENDED';
 
 export interface Project {
   id: number;
@@ -14,6 +15,7 @@ export interface GetProjectsRequest {
   projectId?: number;
   projectName?: string;
   clubId?: number;
+  status?: ProjectStatus;
   page?: number;
   size?: number;
   sortBy?: ProjectSortBy;
